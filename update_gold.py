@@ -11,7 +11,7 @@ xag_usd = get_json("https://api.gold-api.com/price/XAG")["price"]
 usd_inr = get_json("https://api.frankfurter.app/latest?from=USD&to=INR")["rates"]["INR"]
 
 # India Import Duty (6%) + GST (3%) + Bullion Margin (1.5%)
-mult = 1.108
+mult = 1.168
 g24 = round(((xau_usd / 31.1035) * 10.0 * usd_inr) * mult)
 g22 = round(g24 * 0.9167)
 s1k = round(((xag_usd / 31.1035) * 1000.0 * usd_inr) * mult)
